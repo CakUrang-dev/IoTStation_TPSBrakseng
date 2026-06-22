@@ -2,15 +2,16 @@
 #define CONFIG_H
 
 #include <Arduino.h>
+#include "secrets.h"
 
 namespace Cfg {
-  constexpr char     WIFI_SSID[]    = "KANDANG";
-  constexpr char     WIFI_PASS[]    = "12121993";
+  constexpr char     WIFI_SSID[]    = SECRET_WIFI_SSID;
+  constexpr char     WIFI_PASS[]    = SECRET_WIFI_PASS;
   
   constexpr char     MQTT_BROKER[]  = "b846d696536846c98fd91529e90260aa.s1.eu.hivemq.cloud"; 
   constexpr uint16_t MQTT_PORT      = 8883;
-  constexpr char     MQTT_USER[]    = "tpsbrakseng";
-  constexpr char     MQTT_PASS[]    = "YudiTolol123";
+  constexpr char     MQTT_USER[]    = SECRET_MQTT_USER;
+  constexpr char     MQTT_PASS[]    = SECRET_MQTT_PASS;
   constexpr char     MQTT_TOPIC[]   = "tpa/monitor/data";
   constexpr char     FIRMWARE_VERSION[] = "1.0.0"; // Versi saat ini
   constexpr char     OTA_VERSION_URL[]  = "https://raw.githubusercontent.com/USER/REPO/main/version.txt";
